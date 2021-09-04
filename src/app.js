@@ -1,13 +1,15 @@
 const express = require('express')
-const app = express()
 const cors = require("cors")
+const db = require('./src/data/database')
 //require ('dontenv-safe').config()
 
-//const db = require('.data/database')
-//db.connect
+const app = express()
+db.connect()
 
-app.use(cors())
 app.use(express.json())
+app.use(cors())
+
+app.use("/", index)
 
 //const library = require('.routes/library')
 //app.use('/library', library)
