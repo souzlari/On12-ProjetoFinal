@@ -3,7 +3,7 @@ const librarySchema = require("../models/librarySchema")
 //const books = require("../models/librarySchema")
 
 const getAll = async (req, res) => {
-    const books = await librarySchema.find().populate('book')
+    const books = await librarySchema.find()
     res.status(200).json(books)
 }
 
