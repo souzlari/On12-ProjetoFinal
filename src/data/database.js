@@ -1,7 +1,7 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-const MONGO_URL = process.env.MONGODB_URI || "mongodb://localhost:27017/reprograma-conexao"
+const MONGO_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/reprograma-conexao'
 
 const connect = () => {
     mongoose.connect(MONGO_URL, {
@@ -9,11 +9,11 @@ const connect = () => {
         useUnifiedTopology: true
     })
     .then(()=>{
-        console.log("Conectadas bb no MongoDb Atlas")
+        console.log('Conectades ao MongoDb Atlas!')
     })
-    .catch((error)=>{
-        console.log("Algo deu errado")
-        console.error(error)
+    .catch((err)=>{
+        console.log('Perdão, algo deu errado.')
+        console.err(err)
     })
 }
 

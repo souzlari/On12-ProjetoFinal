@@ -1,22 +1,21 @@
 const mongoose = require("mongoose")
-const books = require("../models/libraryModels")
+const librarySchema = require("../models/librarySchema")
+//const books = require("../models/librarySchema")
 
-//Pega todos os livros
 const getAll = async (req, res) => {
-    const books = await books.find().populate('book')
+    const books = await librarySchema.find().populate('book')
     res.status(200).json(books)
 }
 
-//cria um livro
 const createBook = async (req, res) => {
 
-  const book = new books({
+  const book = new librarySchema({
 
     _id: new mongoose.Types.ObjectId(),
     title: req.body.title,
     author: req.body.author,
     year: req.body.year,
-    read: req.body.read
+    country: req.body.country
   })
   try {
     const newBook = await book.save()
@@ -26,16 +25,56 @@ const createBook = async (req, res) => {
   }
 }
 
-//deletar um livro
+const getById = async (req, res) => {
+  try {
+      const book = await librarySchema.findById(req.params.id)
+      if(book == null) {
+          return res.status(404).json({message: 'Perdão, livro não encontrado.'})
+      }
+      res.json(book)
+  } catch (err) {
+      res.status(500).json({ message: err.message })
+
+  }
+}
+
+const updateBook = async (req, res) => {
+  try {
+      const book = await librarySchema.findById(req.params.id)
+      if(book == null) {
+          return res.status(404).json({message: 'Perdão, livro não encontrado.'})
+      }
+      
+      if (req.body.title != null) {
+          book.title = req.body.title
+      }
+      if (req.body.author != null) {
+          book.author = req.body.author
+      }
+      if (req.body.year != null) {
+          book.year = req.body.year
+      }
+      if (req.body.criadoEm != null) {
+          book.country = req.body.country
+      }
+      
+      const bookUpdated = await book.save()
+      res.json(bookUpdated)
+
+  } catch (err) {
+      res.status(500).json({ message: err.message })
+  }
+}
+
 const deleteBook = async (req, res) => {
   try{
-    const book = await books.findById(req.params.id)
+    const book = await librarySchema.findById(req.params.id)
     if(book == null){
-      return res.status(404).json({message: "Livro não encontrado"})
+      return res.status(404).json({message: "Perdão, livro não encontrado."})
     }
 
-    book.remove()
-    res.status(200).json({message: "Livro removido com sucesso"})
+    await book.remove()
+    res.status(200).json({message: "Livro removido com sucesso!"})
 
   } catch(err){
     res.status(500).json({message:err.message})
@@ -45,5 +84,7 @@ const deleteBook = async (req, res) => {
 module.exports = {
     getAll,
     createBook,
+    getById,
+    updateBook,
     deleteBook
 }
