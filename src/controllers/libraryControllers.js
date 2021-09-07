@@ -14,7 +14,7 @@ const createBook = async (req, res) => {
     _id: new mongoose.Types.ObjectId(),
     title: req.body.title,
     author: req.body.author,
-    year: req.body.year,
+    pages: req.body.pages,
     country: req.body.country
   })
   try {
@@ -51,8 +51,8 @@ const updateBook = async (req, res) => {
       if (req.body.author != null) {
           book.author = req.body.author
       }
-      if (req.body.year != null) {
-          book.year = req.body.year
+      if (req.body.pages != null) {
+          book.pages = req.body.pages
       }
       if (req.body.criadoEm != null) {
           book.country = req.body.country
