@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "projetofinal",
   "version": "1.0.0",
   "description": "Clube do Livro - Diário de Bordo",
   "main": "server.js",
@@ -7,8 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souzlari/On12-ProjetoFinal.git"
+  },
   "author": "Lari Souza",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souzlari/On12-ProjetoFinal/issues"
+  },
+  "homepage": "https://github.com/souzlari/On12-ProjetoFinal#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
