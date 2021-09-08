@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const librarySchema = require("../models/librarySchema");
 
 const getAll = async (req, res) => {
-    const books = await librarySchema.find()
+    const books = await librarySchema.find().populate('book')
     res.status(200).json(books)
 };
 
