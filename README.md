@@ -1,5 +1,5 @@
 Reprograma 🚀 | Turma Online 12 | Semana 18 | Back-end | 2021
-# Clube do Livro Leitoras de Bordo - Projeto Final 👯
+# Clube do Livro Leitoras de Bordo - Projeto Final 👯 📚
 
 ![leitoras](https://user-images.githubusercontent.com/81570758/132615863-f0f08856-e51c-43d9-b11a-2925ce711331.jpg)
 ## Sobre o Projeto
@@ -17,6 +17,63 @@ O **Leitoras de Bordo**, é um sistema de gerenciamento do livros já lidos pelo
 | `MongoDb` | Banco de dado não relacional orientado a documentos|
 | `Heroku` | Plataforma nuvem que faz deploy de várias aplicações back-end |
  `Postman` | Interface gráfica para realizar os testes|
+
+<br>
+
+## 📁 Arquitetura 
+
+```
+ 📁 PROJETOFINAL
+   |
+   |-  📁 src
+   |    |
+   |    |- 📁 controllers
+   |         |- 📄 libraryControllers.js
+   |    |- 📁 data
+   |         |- 📄 database.js 
+   |    |- 📁 models
+   |         |- 📄 librarySchema.js
+   |    |- 📁 routes
+   |         |- 📄 library.routes.js 
+   |   
+   |- 📄 .env
+   |- 📄 .env.example
+   |- 📄 .gitignore
+   |- 📄 package-lock.json
+   |- 📄 package-lock.json
+   |- 📄 package.json
+   |- 📄 Procfile
+   |- 📄 README.md
+   |- 📄 server.js
+   |   
+   |      
+   |
+
+```
+
+<br>
+### Requisitos
+<br>
+
+**_Library - Rotas_**
+
+_**{GET}**_
+
+:closed_book:  **"/library"** Deverá retornar todos os livros cadastrados
+
+:closed_book: **"/library/[ID]"** Deverá retornar os livros cadastrados por ID
+
+**_{POST}_**
+
+:closed_book: **"library/register"**  Deverá criar um livro
+
+**_{PATCH}_**
+
+:closed_book: **"/library/update//[ID]"** Deverá alterar informação específica dentro de um livro por id específico
+
+**_{DELETE}_**
+
+:closed_book:  **"/library/delete/[ID]"** Deverá deletar livro por id específico e retornar mensagem amigável
 
 <br>
 
