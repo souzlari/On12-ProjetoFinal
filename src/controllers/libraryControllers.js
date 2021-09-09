@@ -1,11 +1,10 @@
-const mongoose = require("mongoose")
-const librarySchema = require("../models/librarySchema")
-//const books = require("../models/librarySchema")
+const mongoose = require('mongoose');
+const librarySchema = require('../models/librarySchema');
 
 const getAll = async (req, res) => {
     const books = await librarySchema.find()
     res.status(200).json(books)
-}
+};
 
 const createBook = async (req, res) => {
 
@@ -23,7 +22,7 @@ const createBook = async (req, res) => {
   } catch (err) {
     res.status(400).json({ message: err.message})
   }
-}
+};
 
 const getById = async (req, res) => {
   try {
@@ -36,7 +35,7 @@ const getById = async (req, res) => {
       res.status(500).json({ message: err.message })
 
   }
-}
+};
 
 const updateBook = async (req, res) => {
   try {
@@ -64,22 +63,22 @@ const updateBook = async (req, res) => {
   } catch (err) {
       res.status(500).json({ message: err.message })
   }
-}
+};
 
 const deleteBook = async (req, res) => {
   try{
     const book = await librarySchema.findById(req.params.id)
     if(book == null){
-      return res.status(404).json({message: "Perdão, livro não encontrado."})
+      return res.status(404).json({message: 'Perdão, livro não encontrado.'})
     }
 
     await book.remove()
-    res.status(200).json({message: "Livro removido com sucesso!"})
+    res.status(200).json({message: 'Livro removido com sucesso!'})
 
   } catch(err){
     res.status(500).json({message:err.message})
   }
-}
+};
 
 module.exports = {
     getAll,

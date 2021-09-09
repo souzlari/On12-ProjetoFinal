@@ -1,7 +1,7 @@
-require('dotenv').config()
-const mongoose = require('mongoose')
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-const MONGO_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/reprograma-conexao'
+const MONGO_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/reprograma-conexao';
 
 const connect = () => {
     mongoose.connect(MONGO_URL, {
@@ -15,6 +15,6 @@ const connect = () => {
         console.log('Perdão, algo deu errado.')
         console.err(err)
     })
-}
+};
 
 module.exports = { connect }
