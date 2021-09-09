@@ -15,4 +15,4 @@ const usersSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('usuarias', usersSchema) 
+module.exports = mongoose.model('pessoasUsuarias', usersSchema) 
