@@ -9,12 +9,12 @@ const connect = () => {
         useUnifiedTopology: true
     })
     .then(()=>{
-        console.log('Conectades ao MongoDb Atlas!')
+        console.log("Conectades bb no MongoDb Atlas")
     })
     .catch((err)=>{
-        console.log('Perdão, algo deu errado.')
-        console.err(err)
+        console.log("Algo deu errado")
+        console.error(err)
     })
-};
+}
 
 module.exports = { connect }
