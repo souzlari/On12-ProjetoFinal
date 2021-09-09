@@ -1,8 +1,10 @@
 Reprograma 🚀 | Turma Online 12 | Semana 18 | Back-end | 2021
 # Clube do Livro Leitoras de Bordo - Projeto Final 👯
+
+![leitoras](https://user-images.githubusercontent.com/81570758/132615863-f0f08856-e51c-43d9-b11a-2925ce711331.jpg)
 ## Sobre o Projeto
 O **Leitoras de Bordo**, é um sistema de gerenciamento do livros já lidos pelo clube.
-## Tecnologias que vamos usar:
+## Tecnologias usadas:
 | Ferramenta | Descrição |
 | --- | --- |
 | `javascript` | Linguagem de programação |
