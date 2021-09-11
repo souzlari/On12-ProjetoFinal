@@ -3,20 +3,23 @@ Reprograma 🚀 | Turma Online 12 | Semana 18 | Back-end | 2021
 
 ![leitoras](https://user-images.githubusercontent.com/81570758/132615863-f0f08856-e51c-43d9-b11a-2925ce711331.jpg)
 ## Sobre o Projeto
-O **Leitoras de Bordo**, é um sistema de gerenciamento dos livros já lidos pelo clube homônimo.
-## Tecnologias utilizadas:
+O **Leitoras de Bordo** é um sistema de gerenciamento dos livros já lidos pelo clube homônimo.
+
+## 🗃️ Documentação:
+https://web.postman.co/collections/17467280-2659d5cd-bac9-5992-77f5-ec594777c794?workspace=92036d2b-e6c1-477c-8e72-8434a53dc769#1aa684dc-78fd-9f4b-fd41-aac24fabc882
+## 💾 Tecnologias utilizadas:
 | Ferramenta | Descrição |
 | --- | --- |
-| `javascript` | Linguagem de programação |
-| `nodejs` | Ambiente de execução do javascript|
-| `express` | Framework NodeJS |
-| `dotenv` | Dependência para proteger dados sensíveis do projeto|
-| `mongoose` | Dependência que interage com o MongoDB para a conexão da database, criação do model e das collections|
-| `nodemon` | Dependência que observa as atualizações realizadas nos documentos para rodar o servidor automaticamente|
-| `npm` | Gerenciador de pacotes|
-| `MongoDb` | Banco de dado não relacional orientado a documentos|
-| `Heroku` | Plataforma nuvem que faz deploy de várias aplicações back-end |
- `Postman` | Interface gráfica para realizar os testes|
+| `javascript` | linguagem de programação |
+| `nodejs` | ambiente de execução do javascript|
+| `express` | framework NodeJS |
+| `dotenv` | dependência para proteger dados sensíveis do projeto|
+| `mongoose` | dependência que interage com o MongoDB para a conexão da database, criação do model e das collections|
+| `nodemon` | dependência que observa as atualizações realizadas nos documentos para rodar o servidor automaticamente|
+| `npm` | gerenciador de pacotes|
+| `MongoDb` | banco de dado não relacional orientado a documentos|
+| `Heroku` | plataforma nuvem que faz deploy de várias aplicações back-end |
+ `Postman` | interface gráfica para realizar os testes|
 
 <br>
 
@@ -40,7 +43,6 @@ O **Leitoras de Bordo**, é um sistema de gerenciamento dos livros já lidos pel
    |- 📄 .env.example
    |- 📄 .gitignore
    |- 📄 package-lock.json
-   |- 📄 package-lock.json
    |- 📄 package.json
    |- 📄 Procfile
    |- 📄 README.md
@@ -49,7 +51,8 @@ O **Leitoras de Bordo**, é um sistema de gerenciamento dos livros já lidos pel
 ```
 
 <br>
-### Requisitos
+
+## 📑 Requisitos 
 <br>
 
 **_Library - Rotas_**
@@ -75,7 +78,8 @@ _**{GET}**_
 <br>
 
 ### Demandas de negócio: :computer:
-Receber  cadastros de títulos (livros).
+
+- Receber  cadastros de títulos (livros);
 - Ver todos os livros já lidos;
 - Deletar um livro pelo ID;
 - Editar dados de um livro.

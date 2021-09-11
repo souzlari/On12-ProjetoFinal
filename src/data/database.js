@@ -15,6 +15,6 @@ const connect = () => {
         console.log("Algo deu errado")
         console.error(err)
     })
-}
+};
 
 module.exports = { connect }
